@@ -1,0 +1,395 @@
+1. Input
+
+Example 1:Input an Integer
+
+import java.util.Scanner;
+
+public class ScannerDemo1 {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter your age: ");
+        int age = input.nextInt();
+
+        System.out.println("Your age is: " + age);
+    }
+}
+
+Example 2: Input Name and Age
+import java.util.Scanner;
+
+public class ScannerDemo2 {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = input.nextLine();
+
+        System.out.print("Enter your age: ");
+        int age = input.nextInt();
+
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+
+Example 3: Take Two Numbers and Calculate Sum
+import java.util.Scanner;
+
+public class SumCalculator {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int a = input.nextInt();
+
+        System.out.print("Enter second number: ");
+        int b = input.nextInt();
+
+        int sum = a + b;
+
+        System.out.println("Sum = " + sum);
+    }
+}
+Example 4: Input Different Data Types
+import java.util.Scanner;
+
+public class ScannerMethods {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter integer: ");
+        int i = sc.nextInt();
+
+        System.out.print("Enter double: ");
+        double d = sc.nextDouble();
+
+        System.out.print("Enter float: ");
+        float f = sc.nextFloat();
+
+        System.out.println(i);
+        System.out.println(d);
+        System.out.println(f);
+    }
+}
+
+
+
+2. Arrays
+Example 1: Array Declaration and Printing
+public class ArrayDemo1 {
+    public static void main(String[] args) {
+
+        int[] arr = {10, 20, 30, 40, 50};
+
+        for(int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+    }
+}
+
+Example 2: Enhanced For Loop
+public class ArrayDemo2 {
+    public static void main(String[] args) {
+
+        int[] arr = {10, 20, 30, 40, 50};
+
+        for(int value : arr) {
+            System.out.println(value);
+        }
+    }
+}
+
+Example 3: User Input Array
+import java.util.Scanner;
+
+public class ArrayInput {
+     public static void main(String[] args) {
+
+          Scanner sc = new Scanner(System.in);
+
+          System.out.print("Size: ");
+          int size = sc.nextInt();
+
+          int[] arr = new int[size];
+
+          for (int i = 0; i < size; i++) {
+               System.out.print("Enter value: ");
+               arr[i] = sc.nextInt();
+          }
+
+          System.out.println("Array Elements:");
+
+          for (int i = 0; i < size; i++) {
+               System.out.println(arr[i]);
+          }
+     }}
+
+     Example 4:
+
+     Find Sum
+     of Array
+
+     public class ArraySum {
+          public static void main(String[] args) {
+
+               int[] arr = { 10, 20, 30, 40, 50 };
+
+               int sum = 0;
+
+               for (int num : arr) {
+                    sum += num;
+               }
+
+               System.out.println("Sum = " + sum);
+          }
+     }
+
+     Example 5:
+
+     Find Maximum Value
+
+     public class ArrayMax {
+          public static void main(String[] args) {
+
+               int[] arr = { 15, 7, 80, 23, 44 };
+
+               int max = arr[0];
+
+               for (int i = 1; i < arr.length; i++) {
+                    if (arr[i] > max) {
+                         max = arr[i];
+                    }
+               }
+
+               System.out.println("Maximum = " + max);
+          }
+     }
+
+     Example 6:
+
+     Calculate Average
+
+     public class ArrayAverage {
+          public static void main(String[] args) {
+
+               int[] marks = { 70, 80, 90, 85, 95 };
+
+               int sum = 0;
+
+               for (int mark : marks) {
+                    sum += mark;
+               }
+
+               double average = (double) sum / marks.length;
+
+               System.out.println("Average = " + average);
+          }
+     }3.
+
+   Type Conversion (Casting)
+Example 1: Double to Int
+public class TypeCasting1 {
+    public static void main(String[] args) {
+
+        double d = 4.99;
+
+        int i = (int)d;
+
+        System.out.println(d);
+        System.out.println(i);
+    }
+}
+
+Output
+4.99
+4
+
+Example 2: Int to Double (Automatic)
+public class WideningCasting {
+    public static void main(String[] args) {
+
+        int num = 100;
+
+        double d = num;
+
+        System.out.println(d);
+    }
+}
+
+Example 4: Average Calculation Using Casting
+public class AverageDemo {
+    public static void main(String[] args) {
+
+        int a = 10;
+        int b = 20;
+
+        double avg = (double)(a + b) / 2;
+
+        System.out.println(avg);
+    }
+}
+
+Without casting:
+double avg = (a+b)/2;
+
+Output:
+15.0
+
+With odd numbers:
+int a = 10;
+int b = 21;
+
+Without casting:
+15.0
+
+With casting:
+15.5
+
+
+4. Math Class
+Example 1: abs()
+public class MathAbs {
+    public static void main(String[] args) {
+
+        System.out.println(Math.abs(-50));
+    }
+}
+
+Output
+50
+
+Example 2: ceil()
+
+     and floor()
+public class MathCeilFloor {
+    public static void main(String[] args) {
+
+        double x = 5.7;
+
+        System.out.println(Math.ceil(x));
+        System.out.println(Math.floor(x));
+    }
+}
+
+Output
+6.0
+5.0
+
+Example 3: max()
+
+     and min()
+public class MathMaxMin {
+    public static void main(String[] args) {
+
+        System.out.println(Math.max(20, 50));
+        System.out.println(Math.min(20, 50));
+    }
+}
+
+Example 4: round()
+public class MathRound {
+    public static void main(String[] args) {
+
+        System.out.println(Math.round(4.3));
+        System.out.println(Math.round(4.8));
+    }
+}
+
+Output
+4
+5
+
+Example 5: Square Root
+public class MathSqrt {
+    public static void main(String[] args) {
+
+        System.out.println(Math.sqrt(81));
+    }
+}
+
+Output
+9.0
+
+Example 6: Power
+public class MathPower {
+    public static void main(String[] args) {
+
+        System.out.println(Math.pow(2, 5));
+    }
+}
+
+Output
+32.0
+
+Example 7: Random Numbers
+public class MathRandom {
+    public static void main(String[] args) {
+
+        for(int i = 1; i <= 5; i++) {
+
+            int random = (int)(Math.random() * 201);
+
+            System.out.println(random);
+        }
+    }
+}
+
+Example 8: Area of Circle
+import java.util.Scanner;
+
+public class CircleArea {
+     public static void main(String[] args) {
+
+          Scanner sc = new Scanner(System.in);
+
+          System.out.print("Radius: ");
+          double radius = sc.nextDouble();
+
+          double area = Math.PI * radius * radius;
+
+          System.out.println("Area = " + area);
+     }
+}
+
+Combined:
+import java.util.Scanner;
+
+public class StudentMarks {
+
+     public static void main(String[] args) {
+
+          Scanner sc = new Scanner(System.in);
+
+          System.out.print("Enter number of students: ");
+          int n = sc.nextInt();
+
+          int[] marks = new int[n];
+
+          int sum = 0;
+
+          for (int i = 0; i < n; i++) {
+               System.out.print("Enter mark: ");
+               marks[i] = sc.nextInt();
+               sum += marks[i];
+          }
+
+          double average = (double) sum / n;
+
+          System.out.println("Average = " + average);
+
+          System.out.println("Rounded Average = "
+                    + Math.round(average));
+
+          System.out.println("Ceil Average = "
+                    + Math.ceil(average));
+
+          System.out.println("Floor Average = "
+                    + Math.floor(average));
+     }
+}
