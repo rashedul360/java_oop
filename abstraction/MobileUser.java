@@ -1,11 +1,13 @@
 package abstraction;
 
-abstract public class A {
+abstract class MobileUser {
      void Bye() {
+          System.out.print("non abastract method");
      }
 
-     abstract void Hi();
+     abstract void message();
 }
+
 // only function only exist inside the abstract class
 // do not have body of abstract method
 // method ends with ;
