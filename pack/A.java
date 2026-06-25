@@ -1,7 +1,7 @@
 package pack;
 
-public class A {
-     public static void msg() {
+class A {
+     public void msg() {
           System.out.print("A");
      }
 

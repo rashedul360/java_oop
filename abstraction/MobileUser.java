@@ -12,5 +12,6 @@ abstract class MobileUser {
 // do not have body of abstract method
 // method ends with ;
 // abstract methiod must be overwritten
-// abstract method can't be declared as static or final
+// abstract method can't be declared as static or final. (public, protected are
+// allowed)
 // in abstraction class we can write abstract or non abstract method
