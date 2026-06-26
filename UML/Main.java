@@ -15,7 +15,6 @@ public class Main {
           input.next();
           String RegistrationNumber = input.nextLine();
           System.out.print("Enter engine capacity: ");
-
           double capacity = input.nextDouble();
           System.out.print("Enter model: ");
           input.next();
@@ -29,8 +28,7 @@ public class Main {
           m1.createDashboard(size);
           m1.checkBattery();
           m1.checkFuel();
-
+          double a = m1.dsahboard.size;
           input.close();
-
      }
 }

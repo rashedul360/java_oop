@@ -4,8 +4,8 @@ class Motorcycle extends Cycle {
      private double price;
      private String productionYear;
      private String RegistrationNumber;
-     private Dashboard dsahboard; // aggrigation
-     private Engine engine; // composition
+     Dashboard dsahboard; // aggrigation
+     Engine engine; // composition
 
      Motorcycle() { // if data is not available (safety check)
           super();
