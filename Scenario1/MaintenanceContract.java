@@ -2,7 +2,7 @@ package Scenario1;
 
 public class MaintenanceContract extends ProjectDetails {
      protected int durationInMonths;
-     private double total_amount = durationInMonths;
+     private double total_amount;
 
      MaintenanceContract() {
           this(0, 1, "", 1);
@@ -14,19 +14,22 @@ public class MaintenanceContract extends ProjectDetails {
      }
 
      void calculateprice() {
-          this.total_amount += (super.base_Price * this.durationInMonths);
-          this.total_amount += (this.total_amount * ((double) 5 / 100));
-          super.printInvoice(total_amount);
+          double subTotal = super.base_Price * this.durationInMonths;
+          double tax = subTotal * 0.05;
+          this.total_amount = subTotal + tax;
      }
 
+     @Override
      void calculateFinalInvoice() {
           this.calculateprice();
+          super.printInvoice(this.total_amount);
      }
 
      void calculateFinalInvoice(double discountPercentage) {
-          double dis_price = this.total_amount * ((double) discountPercentage / 100);
-          this.total_amount -= dis_price;
           this.calculateprice();
+          double dis_price = this.total_amount * (discountPercentage / 100.0);
+          this.total_amount -= dis_price;
+          super.printInvoice(this.total_amount);
      }
 
      double getPrice() {
