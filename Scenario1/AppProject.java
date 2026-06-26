@@ -5,7 +5,7 @@ public class AppProject extends ProjectDetails {
      private double total_amount = appStorePublishingFee;
 
      AppProject(double appStorePublishingFee, int projectId, String client_Name, double base_Price) {
-          super(projectId, client_Name, appStorePublishingFee);
+          super(projectId, client_Name, base_Price);
           this.appStorePublishingFee = appStorePublishingFee;
      }
 

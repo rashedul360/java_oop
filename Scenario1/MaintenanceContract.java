@@ -9,7 +9,7 @@ public class MaintenanceContract extends ProjectDetails {
      }
 
      MaintenanceContract(int durationInMonths, int projectId, String client_Name, double base_Price) {
-          super(projectId, client_Name, durationInMonths);
+          super(projectId, client_Name, base_Price);
           this.durationInMonths = durationInMonths;
      }
 

@@ -6,7 +6,7 @@ public class WebProject extends ProjectDetails {
      private double total_amount = hostingFee;
 
      WebProject(double hostingFee, int projectId, String client_Name, double base_Price) {
-          super(projectId, client_Name, hostingFee);
+          super(projectId, client_Name, base_Price);
           this.hostingFee = hostingFee;
      }
 
