@@ -35,4 +35,23 @@ public class Order {
      public Date getOrderDate() {
           return orderDate;
      }
+
+     void displayOrder() {
+          System.out.println("========== Order Details ==========");
+          System.out.println("Order ID      : " + orderId);
+          System.out.println("Order Date    : " + orderDate);
+
+          System.out.println("\nCustomer Details");
+          System.out.println("Customer ID   : " + customer.getCusId());
+          System.out.println("Name          : " + customer.getName());
+          System.out.println("Email         : " + customer.getEmail());
+
+          System.out.println("\nOrdered Items");
+          for (MenuItem item : items) {
+               System.out.println("- " + item.getName() + " : " + item.getPrice());
+          }
+
+          System.out.println("\nTotal Amount  : " + total_amount);
+          System.out.println("===================================");
+     }
 }
