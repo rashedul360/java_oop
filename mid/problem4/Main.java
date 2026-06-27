@@ -2,6 +2,20 @@ package mid.problem4;
 
 import java.util.Scanner;
 
+class A {
+     int a = 10;
+
+     void showD() {
+          this.a = 20;
+          System.out.print(a);
+     }
+
+     static void show() {
+
+          System.out.print("not");
+     }
+}
+
 public class Main {
      public static void main(String[] args) {
           Scanner input = new Scanner(System.in);
